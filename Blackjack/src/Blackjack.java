@@ -104,7 +104,6 @@ public class Blackjack {
 		displayCards(playerHand, dealerHand);
 		
 		boolean playerBlackjack = findPlayerHandValue(playerHand) == 21;
-		boolean dealerBlackjack = findDealerHandValue(dealerHand) == 21;
 //		if (playerBlackjack) { //alter this to first check for player blackjack, then return different outcomes based on dealer blackjack
 //			if (playerBlackjack == dealerBlackjack) {
 //				int outcome = 2;
@@ -142,6 +141,7 @@ public class Blackjack {
 					
 					System.out.println("Busted!");
 					outcome = 1;
+					scanner.close();
 					return outcome;
 					//1 = player loss
 				}
@@ -155,6 +155,7 @@ public class Blackjack {
 			}
 			
 		}
+		scanner.close();
 		int playerHandValue = findPlayerHandValue(playerHand);
 		int dealerHandValue = findDealerHandValue(dealerHand);
 		
@@ -239,8 +240,6 @@ public class Blackjack {
 		}
 		//determinePayout method
 		scanner.close();
-
-		
 		return outcome;
 		
 	}
@@ -265,8 +264,8 @@ public class Blackjack {
 	public static void main(String[] args) {
 		double balance = 100;
 		boolean playAgain = true;
+		Scanner scanner = new Scanner(System.in);
 		while (playAgain == true && balance > 0) {
-			Scanner scanner = new Scanner(System.in);
 			System.out.println("How much money would you like to wager?");
 			double wager = scanner.nextDouble();
 			int outcome = playBlackjack();
@@ -275,10 +274,12 @@ public class Blackjack {
 			System.out.println("Your balance is now $" + balance + ".");
 			String input = "";
 			System.out.println("Would you like to play again? Please answer \"yes\" or \"no\".");
+			
 			while (!input.equals("yes") && !input.equals("no")) {
 				input = scanner.nextLine();
 			}
 		}
+		scanner.close();
 	}
 
 }

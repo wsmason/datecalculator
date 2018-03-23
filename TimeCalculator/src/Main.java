@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 
 
 
-public class Main {
+public class Main extends GUI{
 	
 	static int[] getDate1() {
 		int[] date = new int[3];
@@ -23,20 +23,13 @@ public class Main {
 	}
 	
 	
-	
 	public static void main(String[] args) {
-		JFrame frame = new JFrame("Date Calculator");
-		JButton button = new JButton();
-		frame.add(button);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.pack();
-		frame.setLocationRelativeTo(null);
-		button.setSize(50, 50);
-		frame.setVisible(true);
-		int[] date1 = getDate1();
-		for (int i=0; i< date1.length; i++) {
-		System.out.println(date1[i]);
-		}
+		launchFrame();
+		
+//		int[] date1 = getDate1();
+//		for (int i=0; i< date1.length; i++) {
+//		System.out.println(date1[i]);
+//		}
 	}
 }
 

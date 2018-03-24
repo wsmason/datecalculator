@@ -276,7 +276,7 @@ public class Blackjack {
 				input = scanner.nextLine();
 			}
 			if (input.equals("no")) {
-				playAgain = false;
+				playAgain = false; 
 			}
 		}
 		scanner.close();

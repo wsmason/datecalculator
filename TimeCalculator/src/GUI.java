@@ -20,6 +20,6 @@ public class GUI {
 		button.addActionListener(l);
 	}
 	  
-	
+	 
 	
 }

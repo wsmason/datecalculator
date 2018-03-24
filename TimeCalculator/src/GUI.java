@@ -13,7 +13,7 @@ public class GUI {
 		frame.pack();
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true); 
-		
+		//test
 		
 		button.setText("test");
 		ActionListener l = null;

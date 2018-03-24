@@ -141,7 +141,6 @@ public class Blackjack {
 					
 					System.out.println("Busted!");
 					outcome = 1;
-					scanner.close();
 					return outcome;
 					//1 = player loss
 				}
@@ -155,7 +154,6 @@ public class Blackjack {
 			}
 			
 		}
-		scanner.close();
 		int playerHandValue = findPlayerHandValue(playerHand);
 		int dealerHandValue = findDealerHandValue(dealerHand);
 		
@@ -239,7 +237,6 @@ public class Blackjack {
 					
 		}
 		//determinePayout method
-		scanner.close();
 		return outcome;
 		
 	}
